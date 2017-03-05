@@ -1,0 +1,13 @@
+Font chinh: Arial + Helvetica Neue
+Mau Sac Chinh: xanh duong: #007eff
+		do: #ff0000
+		xanh la: #38ff5a
+		trang: #ffffff
+
+Tieu De Cau Hoi su dung: Arial bold
+
+vacabulary: dap an: #9e9e9e
+
+Grammar: Chon dap an: #ff3636, Opacity: 50%
+
+Cham Diem: Read + Voca... : Arial bold

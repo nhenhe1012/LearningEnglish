@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    var mainController: MainLearningViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainController = MainLearningViewController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.present(mainController!, animated: true, completion: nil)
     }
 }
 

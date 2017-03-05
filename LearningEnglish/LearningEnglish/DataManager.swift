@@ -15,8 +15,8 @@ class DataManager{
     func copyToDocument() {
         let fileManger = FileManager.default
         let doumentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-        let destinationPath = doumentDirectoryPath.appendingPathComponent("com.tiennt12.picandword.database.sqlite")
-        let sourcePath = Bundle.main.path(forResource: "com.tiennt12.picandword.database", ofType: "sqlite")
+        let destinationPath = doumentDirectoryPath.appendingPathComponent("NheNhe.sqlite")
+        let sourcePath = Bundle.main.path(forResource: "NheNhe", ofType: "sqlite")
         if fileManger.fileExists(atPath: destinationPath) {
             return
         }
@@ -30,11 +30,10 @@ class DataManager{
     
     func loadData()
     {
-        
         copyToDocument()
         
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            .appendingPathComponent("com.tiennt12.picandword.database.sqlite")
+            .appendingPathComponent("NheNhe.sqlite")
         
         var db: OpaquePointer? = nil
         var statement: OpaquePointer? = nil
