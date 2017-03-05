@@ -14,6 +14,9 @@
 		845007401E6C1D7000DB8C55 /* font in Resources */ = {isa = PBXBuildFile; fileRef = 8450073C1E6C1D7000DB8C55 /* font */; };
 		845007411E6C1D7000DB8C55 /* Load Screen in Resources */ = {isa = PBXBuildFile; fileRef = 8450073D1E6C1D7000DB8C55 /* Load Screen */; };
 		845007421E6C1D7000DB8C55 /* Main in Resources */ = {isa = PBXBuildFile; fileRef = 8450073E1E6C1D7000DB8C55 /* Main */; };
+		845007491E6C215600DB8C55 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845007481E6C215600DB8C55 /* DataManager.swift */; };
+		8450074F1E6C24FD00DB8C55 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8450074E1E6C24FD00DB8C55 /* libsqlite3.0.tbd */; };
+		845007531E6C281F00DB8C55 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845007521E6C281F00DB8C55 /* Utils.swift */; };
 		846C4EEF1E699FB10037AF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C4EEE1E699FB10037AF05 /* AppDelegate.swift */; };
 		846C4EF11E699FB10037AF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C4EF01E699FB10037AF05 /* ViewController.swift */; };
 		846C4EF41E699FB10037AF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C4EF21E699FB10037AF05 /* Main.storyboard */; };
@@ -48,6 +51,10 @@
 		8450073C1E6C1D7000DB8C55 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = font; path = Resource/font; sourceTree = SOURCE_ROOT; };
 		8450073D1E6C1D7000DB8C55 /* Load Screen */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Load Screen"; path = "Resource/Load Screen"; sourceTree = SOURCE_ROOT; };
 		8450073E1E6C1D7000DB8C55 /* Main */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Main; path = Resource/Main; sourceTree = SOURCE_ROOT; };
+		845007481E6C215600DB8C55 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8450074C1E6C249D00DB8C55 /* SQLite-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		8450074E1E6C24FD00DB8C55 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		845007521E6C281F00DB8C55 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		846C4EEB1E699FB10037AF05 /* LearningEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C4EEE1E699FB10037AF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C4EF01E699FB10037AF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8450074F1E6C24FD00DB8C55 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +117,65 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		845007431E6C20BF00DB8C55 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				845007521E6C281F00DB8C55 /* Utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		845007441E6C20E300DB8C55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845007511E6C279E00DB8C55 /* CustomCell */,
+				845007501E6C278300DB8C55 /* Storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		845007451E6C20ED00DB8C55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8450074C1E6C249D00DB8C55 /* SQLite-Bridging-Header.h */,
+				846C4EEE1E699FB10037AF05 /* AppDelegate.swift */,
+				846C4EF01E699FB10037AF05 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		845007461E6C20F700DB8C55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845007481E6C215600DB8C55 /* DataManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8450074D1E6C24FD00DB8C55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8450074E1E6C24FD00DB8C55 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		845007501E6C278300DB8C55 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				846C4EF71E699FB10037AF05 /* LaunchScreen.storyboard */,
+				846C4EF21E699FB10037AF05 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		845007511E6C279E00DB8C55 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 		846C4EE21E699FB00037AF05 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +183,7 @@
 				846C4F021E699FB10037AF05 /* LearningEnglishTests */,
 				846C4F0D1E699FB10037AF05 /* LearningEnglishUITests */,
 				846C4EEC1E699FB10037AF05 /* Products */,
+				8450074D1E6C24FD00DB8C55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,13 +200,13 @@
 		846C4EED1E699FB10037AF05 /* LearningEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				845007461E6C20F700DB8C55 /* Model */,
+				845007451E6C20ED00DB8C55 /* Controller */,
+				845007441E6C20E300DB8C55 /* View */,
+				845007431E6C20BF00DB8C55 /* Utils */,
 				845007321E6C1D1400DB8C55 /* Resource */,
 				845007311E6C1D0900DB8C55 /* Database */,
-				846C4EEE1E699FB10037AF05 /* AppDelegate.swift */,
-				846C4EF01E699FB10037AF05 /* ViewController.swift */,
-				846C4EF21E699FB10037AF05 /* Main.storyboard */,
 				846C4EF51E699FB10037AF05 /* Assets.xcassets */,
-				846C4EF71E699FB10037AF05 /* LaunchScreen.storyboard */,
 				846C4EFA1E699FB10037AF05 /* Info.plist */,
 			);
 			path = LearningEnglish;
@@ -305,7 +373,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C4EF11E699FB10037AF05 /* ViewController.swift in Sources */,
+				845007491E6C215600DB8C55 /* DataManager.swift in Sources */,
 				846C4EEF1E699FB10037AF05 /* AppDelegate.swift in Sources */,
+				845007531E6C281F00DB8C55 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +532,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhenhedev.LearningEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -475,6 +546,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nhenhedev.LearningEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
