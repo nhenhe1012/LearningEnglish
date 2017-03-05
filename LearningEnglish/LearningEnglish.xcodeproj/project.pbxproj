@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845007371E6C1D5300DB8C55 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 845007331E6C1D5300DB8C55 /* Audio */; };
+		845007391E6C1D5300DB8C55 /* NheNhe.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 845007351E6C1D5300DB8C55 /* NheNhe.sqlite */; };
+		8450073A1E6C1D5300DB8C55 /* txtRead in Resources */ = {isa = PBXBuildFile; fileRef = 845007361E6C1D5300DB8C55 /* txtRead */; };
+		8450073F1E6C1D7000DB8C55 /* color in Resources */ = {isa = PBXBuildFile; fileRef = 8450073B1E6C1D7000DB8C55 /* color */; };
+		845007401E6C1D7000DB8C55 /* font in Resources */ = {isa = PBXBuildFile; fileRef = 8450073C1E6C1D7000DB8C55 /* font */; };
+		845007411E6C1D7000DB8C55 /* Load Screen in Resources */ = {isa = PBXBuildFile; fileRef = 8450073D1E6C1D7000DB8C55 /* Load Screen */; };
+		845007421E6C1D7000DB8C55 /* Main in Resources */ = {isa = PBXBuildFile; fileRef = 8450073E1E6C1D7000DB8C55 /* Main */; };
 		846C4EEF1E699FB10037AF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C4EEE1E699FB10037AF05 /* AppDelegate.swift */; };
 		846C4EF11E699FB10037AF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C4EF01E699FB10037AF05 /* ViewController.swift */; };
 		846C4EF41E699FB10037AF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C4EF21E699FB10037AF05 /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845007331E6C1D5300DB8C55 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = Database/Audio; sourceTree = SOURCE_ROOT; };
+		845007351E6C1D5300DB8C55 /* NheNhe.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = NheNhe.sqlite; path = Database/NheNhe.sqlite; sourceTree = SOURCE_ROOT; };
+		845007361E6C1D5300DB8C55 /* txtRead */ = {isa = PBXFileReference; lastKnownFileType = folder; name = txtRead; path = Database/txtRead; sourceTree = SOURCE_ROOT; };
+		8450073B1E6C1D7000DB8C55 /* color */ = {isa = PBXFileReference; lastKnownFileType = folder; name = color; path = Resource/color; sourceTree = SOURCE_ROOT; };
+		8450073C1E6C1D7000DB8C55 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = font; path = Resource/font; sourceTree = SOURCE_ROOT; };
+		8450073D1E6C1D7000DB8C55 /* Load Screen */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Load Screen"; path = "Resource/Load Screen"; sourceTree = SOURCE_ROOT; };
+		8450073E1E6C1D7000DB8C55 /* Main */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Main; path = Resource/Main; sourceTree = SOURCE_ROOT; };
 		846C4EEB1E699FB10037AF05 /* LearningEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C4EEE1E699FB10037AF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C4EF01E699FB10037AF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845007311E6C1D0900DB8C55 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				845007331E6C1D5300DB8C55 /* Audio */,
+				845007351E6C1D5300DB8C55 /* NheNhe.sqlite */,
+				845007361E6C1D5300DB8C55 /* txtRead */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		845007321E6C1D1400DB8C55 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8450073B1E6C1D7000DB8C55 /* color */,
+				8450073C1E6C1D7000DB8C55 /* font */,
+				8450073D1E6C1D7000DB8C55 /* Load Screen */,
+				8450073E1E6C1D7000DB8C55 /* Main */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		846C4EE21E699FB00037AF05 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +132,8 @@
 		846C4EED1E699FB10037AF05 /* LearningEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				845007321E6C1D1400DB8C55 /* Resource */,
+				845007311E6C1D0900DB8C55 /* Database */,
 				846C4EEE1E699FB10037AF05 /* AppDelegate.swift */,
 				846C4EF01E699FB10037AF05 /* ViewController.swift */,
 				846C4EF21E699FB10037AF05 /* Main.storyboard */,
@@ -234,8 +271,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C4EF91E699FB10037AF05 /* LaunchScreen.storyboard in Resources */,
+				8450073A1E6C1D5300DB8C55 /* txtRead in Resources */,
+				845007411E6C1D7000DB8C55 /* Load Screen in Resources */,
+				845007421E6C1D7000DB8C55 /* Main in Resources */,
+				845007391E6C1D5300DB8C55 /* NheNhe.sqlite in Resources */,
+				845007401E6C1D7000DB8C55 /* font in Resources */,
 				846C4EF61E699FB10037AF05 /* Assets.xcassets in Resources */,
 				846C4EF41E699FB10037AF05 /* Main.storyboard in Resources */,
+				845007371E6C1D5300DB8C55 /* Audio in Resources */,
+				8450073F1E6C1D7000DB8C55 /* color in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +552,7 @@
 				846C4F151E699FB10037AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846C4F161E699FB10037AF05 /* Build configuration list for PBXNativeTarget "LearningEnglishTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +561,7 @@
 				846C4F181E699FB10037AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		846C4F191E699FB10037AF05 /* Build configuration list for PBXNativeTarget "LearningEnglishUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +570,7 @@
 				846C4F1B1E699FB10037AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

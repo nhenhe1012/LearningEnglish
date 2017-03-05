@@ -1,0 +1,22 @@
+The Greek Thales of Milet discovered that when two materials are rubbed together there is a spark between them. A small piece of fire is thrown off in the air, like when wood is burning. He concluded that any object in our world is made up of very small particles, or pieces, that are electrically charged. These charges have opposite values that drive each other together and back again. Thus electrons have a negative charge, while protons have a positive charge. Electric charges are measured in coulomb.
+</br>
+</br>
+In the 18th century physicist Michael Faraday observed that there is a force that always works between two charges, which he called an electric field. If the two charges are the same, the electric field causes bodies <b>to repel</b> each other or drive each other back. If charges are different, the electric field does the opposite. Therefore, the electric field or force is different from the other main force in the universe. The gravitational force always works in the same way, by pulling two bodies together.
+</br>
+</br>
+Electric charges never stand still, but flow from one point to another. This flow is called an electric current and is measured in ampere. Many modern electronic devices <b>make use of </b>electric currents in order to transport electric energy. In nature, there is also a lot of stored electricity, which comes out and is released through lightning during a storm. Men have stored electric energy in huge power stations, which then<b> transmit </b>or send electricity to customers by using wires. The electric energy used by customers is measured in watts.
+</br>
+</br>
+A power station works in two ways. Traditional power stations burn coal, oil or natural gas, thus changing heat into electricity. Unfortunately, this method produces a lot of toxic gases that poison the atmosphere. A cleaner, greener way to produce electricity is through nuclear power stations, or by using other natural sources, such as the wind, the sun, or water.
+</br>
+</br>
+<b>Magnetism</b>
+</br>
+</br>
+Magnetism is the other basic natural force by which one material puts pressure on another material. Materials with strong magnetic power are iron, steel and lodestone. The magnetic power or force can either attract or repel the two materials and<b> comes about </b>or is created because of a magnetic field. Magnetic fields are measured in ampere by a meter. Magnetism is closely linked to electricity since it is seen when electrically charged particles move about. This movement can either be that of electrons flowing through an electric current, or that of electrons spinning around in an atom, which is the smallest possible particle in the universe. Physicists Maxwell and Biot-Savart have observed that electric fields produce magnetic fields, and in turn changing magnetic fields create electric fields. Magnetic fields fall straight onto an electric field, but they do not speed up or slow down the movement of the charged particles. They only change the direction of the particles' flow.
+</br>
+</br>
+Magnetic fields usually have two opposing poles, a North and a South Pole, and also contain energy. When two magnetic fields are in line with each other, they <b>cancel each other out</b>. Both have the same value zero and are in perfect balance. They cannot be moved around anymore. This feature of magnetic fields has been used for centuries to make compasses. A compass works together with the Earth's magnetic field and always points in the same direction, which is North. Sailors still use compasses to travel the seas.
+</br>
+</br>
+Magnets have found other uses as well. A crane that lifts heavy objects from the ground works with the help of an electromagnet. In this case, an electric current is passed through a loop wire to form a magnetic force. When the flow of the current is changed, the magnetic force pushes attached objects into the opposite direction. Radio antennas work in a similar way with the help of electromagnets.
