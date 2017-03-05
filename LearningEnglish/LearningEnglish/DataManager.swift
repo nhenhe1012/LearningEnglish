@@ -10,6 +10,10 @@ import Foundation
 
 class DataManager{
     
+    var arrLession = [Lession]()
+    
+    var selectedLession: Int = -1
+    
     static let shared = DataManager()
     
     func copyToDocument() {
@@ -28,7 +32,7 @@ class DataManager{
         }
     }
     
-    func loadData()
+    func loadLessionData()
     {
         copyToDocument()
         
@@ -40,42 +44,29 @@ class DataManager{
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
             print("error opening database")
         }
-        if sqlite3_prepare_v2(db, "select * from Level", -1, &statement, nil) != SQLITE_OK {
+        if sqlite3_prepare_v2(db, "select * from Lession", -1, &statement, nil) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db))
             print("error preparing select: \(errmsg)")
         }
         
-//        while sqlite3_step(statement) == SQLITE_ROW {
-//            var data = WordStruct()
-//            data.id = Int(sqlite3_column_int64(statement, 0))
-//            
-//            if let img = sqlite3_column_blob(statement, 2)
-//            {
-//                let len = sqlite3_column_bytes(statement, 2)
-//                data.image1 = NSData(bytes: img, length: Int(len)) as Data
-//            }
-//            if let img = sqlite3_column_blob(statement, 3)
-//            {
-//                let len = sqlite3_column_bytes(statement, 3)
-//                data.image2 = NSData(bytes: img, length: Int(len)) as Data
-//            }
-//            if let img = sqlite3_column_blob(statement, 4)
-//            {
-//                let len = sqlite3_column_bytes(statement, 4)
-//                data.image3 = NSData(bytes: img, length: Int(len)) as Data
-//            }
-//            if let img = sqlite3_column_blob(statement, 5)
-//            {
-//                let len = sqlite3_column_bytes(statement, 5)
-//                data.image4 = NSData(bytes: img, length: Int(len)) as Data
-//            }
-//            if let word = sqlite3_column_text(statement, 6) {
-//                data.word = String(cString: word)
-//            }
-//            data.isWon = Int(sqlite3_column_int64(statement, 7))
-//            
-//            listData.append(data)
-//        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            var lession = Lession()
+            lession.maLession = Int(sqlite3_column_int64(statement, 0))
+            lession.rating = Int(sqlite3_column_int64(statement, 2))
+            if let name = sqlite3_column_text(statement, 1) {
+                lession.tenBaiLam = String(cString: name)
+            }
+            if let name = sqlite3_column_text(statement, 3) {
+                lession.bfTheRead = String(cString: name)
+            }
+            if let name = sqlite3_column_text(statement, 4) {
+                lession.nVocabulary = String(cString: name)
+            }
+            if let name = sqlite3_column_text(statement, 5) {
+                lession.iDiom = String(cString: name)
+            }
+            arrLession.append(lession)
+        }
         
         if sqlite3_finalize(statement) != SQLITE_OK {
             let errmsg = String(cString: sqlite3_errmsg(db))

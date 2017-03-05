@@ -9,6 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainLearningViewController" customModule="LearningEnglish" customModuleProvider="target">
             <connections>
+                <outlet property="btnBeforRead" destination="Nk3-4L-29x" id="O0o-0t-F8A"/>
+                <outlet property="btnGrammar" destination="ggC-Da-sQp" id="XL1-0y-Tqy"/>
+                <outlet property="btnRead" destination="dQD-ZV-ruz" id="jNs-3t-bgW"/>
+                <outlet property="btnScore" destination="yhG-xT-ChK" id="IZv-2B-Nzh"/>
+                <outlet property="btnVocabulary" destination="3Ey-fH-SaU" id="heT-E2-BUi"/>
+                <outlet property="btnVocabulary12" destination="ZQU-tJ-e2R" id="EYm-U5-FCY"/>
+                <outlet property="btnVocabulary34" destination="FCq-W1-RnX" id="E4Z-6M-GZK"/>
                 <outlet property="mainContentPart" destination="kpY-vQ-nnb" id="vqy-wO-bQL"/>
                 <outlet property="mainContentView" destination="FO3-N0-tSE" id="cHv-83-7Mo"/>
                 <outlet property="mainControlContent" destination="nsD-h7-YKd" id="UNl-VQ-UH8"/>
@@ -21,25 +28,84 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-MS-EEb">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jMB-34-Mmz"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-MS-EEb">
+                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-N0-tSE">
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-h7-YKd">
-                            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk3-4L-29x">
+                                    <state key="normal" image="button_beforuread_01.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="qY7-kE-sKg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQD-ZV-ruz">
+                                    <state key="normal" image="button_Read_01.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="QCJ-zd-ofU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-fH-SaU">
+                                    <state key="normal" image="button_vocabulary_01.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="TpQ-ux-QIx"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-Da-sQp">
+                                    <state key="normal" image="button_grammar_01.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="IoM-hm-NPO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-xT-ChK">
+                                    <state key="normal" image="button_score_active.png"/>
+                                    <connections>
+                                        <action selector="btnScoreClicked:" destination="-1" eventType="touchUpInside" id="fbU-CB-3QE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQU-tJ-e2R">
+                                    <state key="normal" image="btn_1&amp;2_act.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="biE-5N-9hL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-W1-RnX">
+                                    <state key="normal" image="btn_3&amp;4_nor.png"/>
+                                    <connections>
+                                        <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="8h3-Zt-x5a"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="120" id="dWN-6K-uLD"/>
+                                <constraint firstItem="ggC-Da-sQp" firstAttribute="centerY" secondItem="nsD-h7-YKd" secondAttribute="centerY" id="4uA-vG-cC7"/>
+                                <constraint firstItem="FCq-W1-RnX" firstAttribute="trailing" secondItem="3Ey-fH-SaU" secondAttribute="trailing" id="Cl2-cy-VJY"/>
+                                <constraint firstAttribute="trailing" secondItem="yhG-xT-ChK" secondAttribute="trailing" constant="50" id="Gc9-a9-4Hx"/>
+                                <constraint firstItem="yhG-xT-ChK" firstAttribute="centerY" secondItem="nsD-h7-YKd" secondAttribute="centerY" id="HBW-j7-ose"/>
+                                <constraint firstItem="FCq-W1-RnX" firstAttribute="top" secondItem="3Ey-fH-SaU" secondAttribute="bottom" constant="5" id="HMV-3D-jvA"/>
+                                <constraint firstItem="3Ey-fH-SaU" firstAttribute="leading" secondItem="dQD-ZV-ruz" secondAttribute="trailing" constant="50" id="Rw4-MZ-LTq"/>
+                                <constraint firstItem="dQD-ZV-ruz" firstAttribute="leading" secondItem="Nk3-4L-29x" secondAttribute="trailing" constant="50" id="Tmj-J1-EGj"/>
+                                <constraint firstItem="ZQU-tJ-e2R" firstAttribute="top" secondItem="3Ey-fH-SaU" secondAttribute="bottom" constant="5" id="V8h-Pp-DX8"/>
+                                <constraint firstItem="yhG-xT-ChK" firstAttribute="leading" secondItem="ggC-Da-sQp" secondAttribute="trailing" constant="40" id="YP3-eT-lpN"/>
+                                <constraint firstAttribute="height" constant="100" id="dWN-6K-uLD"/>
+                                <constraint firstItem="ZQU-tJ-e2R" firstAttribute="leading" secondItem="3Ey-fH-SaU" secondAttribute="leading" id="iF2-vM-V8N"/>
+                                <constraint firstItem="dQD-ZV-ruz" firstAttribute="centerY" secondItem="nsD-h7-YKd" secondAttribute="centerY" id="ldb-FI-0B3"/>
+                                <constraint firstItem="ggC-Da-sQp" firstAttribute="leading" secondItem="3Ey-fH-SaU" secondAttribute="trailing" constant="50" id="s4h-hm-IVp"/>
+                                <constraint firstItem="Nk3-4L-29x" firstAttribute="centerY" secondItem="nsD-h7-YKd" secondAttribute="centerY" id="u5I-ez-tM4"/>
+                                <constraint firstItem="3Ey-fH-SaU" firstAttribute="centerY" secondItem="nsD-h7-YKd" secondAttribute="centerY" id="zhx-6Y-DyL"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-vQ-nnb">
-                            <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="kpY-vQ-nnb" secondAttribute="trailing" id="GXu-7g-5g6"/>
-                        <constraint firstItem="nsD-h7-YKd" firstAttribute="top" secondItem="FO3-N0-tSE" secondAttribute="top" constant="20" id="IEJ-tP-RHQ"/>
+                        <constraint firstItem="nsD-h7-YKd" firstAttribute="top" secondItem="FO3-N0-tSE" secondAttribute="top" id="IEJ-tP-RHQ"/>
                         <constraint firstAttribute="trailing" secondItem="nsD-h7-YKd" secondAttribute="trailing" id="LmL-DG-QMB"/>
                         <constraint firstItem="kpY-vQ-nnb" firstAttribute="leading" secondItem="FO3-N0-tSE" secondAttribute="leading" id="Loo-Ic-kRZ"/>
                         <constraint firstItem="kpY-vQ-nnb" firstAttribute="top" secondItem="nsD-h7-YKd" secondAttribute="bottom" id="ZAe-yL-PNa"/>
@@ -51,15 +117,29 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="FO3-N0-tSE" secondAttribute="bottom" id="6R7-QB-BpV"/>
+                <constraint firstItem="jMB-34-Mmz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Ym-MN-XsI"/>
                 <constraint firstItem="G6U-MS-EEb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Fw9-26-OYz"/>
-                <constraint firstItem="G6U-MS-EEb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TS0-PZ-7s9"/>
-                <constraint firstAttribute="bottom" secondItem="G6U-MS-EEb" secondAttribute="bottom" id="TbU-tW-3Mh"/>
+                <constraint firstItem="jMB-34-Mmz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LDG-ll-JCp"/>
+                <constraint firstAttribute="trailing" secondItem="jMB-34-Mmz" secondAttribute="trailing" id="NTH-iz-NfQ"/>
+                <constraint firstItem="G6U-MS-EEb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="TS0-PZ-7s9"/>
+                <constraint firstAttribute="bottom" secondItem="G6U-MS-EEb" secondAttribute="bottom" constant="20" id="TbU-tW-3Mh"/>
                 <constraint firstItem="FO3-N0-tSE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VP6-2X-AD8"/>
-                <constraint firstItem="G6U-MS-EEb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/3.4" id="VQe-Bt-ovD"/>
+                <constraint firstItem="G6U-MS-EEb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/4" id="VQe-Bt-ovD"/>
                 <constraint firstAttribute="trailing" secondItem="FO3-N0-tSE" secondAttribute="trailing" id="dcX-LK-rE1"/>
                 <constraint firstItem="FO3-N0-tSE" firstAttribute="leading" secondItem="G6U-MS-EEb" secondAttribute="trailing" id="rtG-Tq-U9c"/>
+                <constraint firstAttribute="bottom" secondItem="jMB-34-Mmz" secondAttribute="bottom" id="vku-VK-5mk"/>
             </constraints>
-            <point key="canvasLocation" x="-795" y="-425"/>
+            <point key="canvasLocation" x="-1220" y="-963"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background.jpg" width="1280" height="800"/>
+        <image name="btn_1&amp;2_act.png" width="56" height="20"/>
+        <image name="btn_3&amp;4_nor.png" width="56" height="20"/>
+        <image name="button_Read_01.png" width="63" height="35"/>
+        <image name="button_beforuread_01.png" width="137" height="35"/>
+        <image name="button_grammar_01.png" width="102" height="35"/>
+        <image name="button_score_active.png" width="55" height="55"/>
+        <image name="button_vocabulary_01.png" width="118" height="35"/>
+    </resources>
 </document>
