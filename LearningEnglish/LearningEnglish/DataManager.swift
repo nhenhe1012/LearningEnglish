@@ -14,6 +14,8 @@ class DataManager{
     
     var selectedLession: Int = -1
     
+    var isPlayingSound: Bool = false
+    
     static let shared = DataManager()
     
     func copyToDocument() {
