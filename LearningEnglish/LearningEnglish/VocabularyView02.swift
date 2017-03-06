@@ -10,12 +10,13 @@ import UIKit
 
 class VocabularyView02: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+    class func instanceFromNib() -> VocabularyView02 {
+        return UINib(nibName: "VocabularyView02", bundle: nil).instantiate(withOwner: self, options: nil).first as! VocabularyView02
+    }
 }

@@ -10,12 +10,12 @@ import UIKit
 
 class ReadView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
-    */
-
+    
+    class func instanceFromNib() -> ReadView {
+        return UINib(nibName: "ReadView", bundle: nil).instantiate(withOwner: self, options: nil).first as! ReadView
+    }
 }

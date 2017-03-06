@@ -32,6 +32,18 @@ class MainLearningViewController: UIViewController {
     
     @IBOutlet weak var btnScore: UIButton!
     
+    var beforeReadView: BeforeReadView?
+    
+    var readView: ReadView?
+    
+    var vocabularyView01: VocabularyView01?
+    
+    var vocabularyView02: VocabularyView02?
+    
+    var grammarView: GrammarView?
+    
+    var resultView: ResultView?
+    
     var curTab: Int = 0
     
     override func viewDidLoad() {
@@ -42,13 +54,51 @@ class MainLearningViewController: UIViewController {
         mainTableView.dataSource = self
         
         handleVocabularyBtn(isHidden: true)
+        
+        beforeReadView = BeforeReadView.instanceFromNib()
+        
+        readView = ReadView.instanceFromNib()
+        
+        vocabularyView01 = VocabularyView01.instanceFromNib()
+        
+        vocabularyView02 = VocabularyView02.instanceFromNib()
+        
+        grammarView = GrammarView.instanceFromNib()
+        
+        resultView = ResultView.instanceFromNib()
+        
+        
+        
+        beforeReadView?.frame = mainContentPart.bounds
+        readView?.frame = mainContentPart.bounds
+        vocabularyView01?.frame = mainContentPart.bounds
+        vocabularyView02?.frame = mainContentPart.bounds
+        grammarView?.frame = mainContentPart.bounds
+        
+        
+        self.mainContentPart.addSubview(beforeReadView!)
+        self.mainContentPart.addSubview(readView!)
+        self.mainContentPart.addSubview(vocabularyView01!)
+        self.mainContentPart.addSubview(vocabularyView02!)
+        self.mainContentPart.addSubview(grammarView!)
+        
+        hiddenAllSubView()
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
-        if curTab == sender.tag {
+        if DataManager.shared.selectedLession != -1
+        {
+            beforeReadView?.loadData(index: DataManager.shared.selectedLession)
+        }
+        else
+        {
+            return
+        }
+        if curTab == sender.tag{
             return
         }
         setAllButtonDefault()
+        hiddenAllSubView()
         var imgNameString = ""
         if(sender.tag == 3 || sender.tag == 5 || sender.tag == 6)
         {
@@ -61,25 +111,31 @@ class MainLearningViewController: UIViewController {
         switch sender.tag {
         case 1:
             imgNameString = "button_beforuread_02.png"
+            beforeReadView?.isHidden = false
             break
         case 2:
             imgNameString = "button_Read_02.png"
+            readView?.isHidden = false
             break
         case 3:
             imgNameString = "button_vocabulary_02.png"
             self.btnVocabulary12.setImage(UIImage(named: "btn_1&2_act.png"), for: .normal)
+            vocabularyView01?.isHidden = false
             break
         case 4:
             imgNameString = "button_grammar_02.png"
+            grammarView?.isHidden = false
             break
         case 5:
             self.btnVocabulary.setImage(UIImage(named: "button_vocabulary_02.png"), for: .normal)
             imgNameString = "btn_1&2_act.png"
+            vocabularyView01?.isHidden = false
             curTab = 3
             break
         case 6:
             self.btnVocabulary.setImage(UIImage(named: "button_vocabulary_02.png"), for: .normal)
             imgNameString = "btn_3&4_act.png"
+            vocabularyView02?.isHidden = false
             curTab = 3
             break
         default:
@@ -87,7 +143,15 @@ class MainLearningViewController: UIViewController {
         }
 
         sender.setImage(UIImage(named: imgNameString), for: .normal)
-        
+    }
+    
+    
+    func hiddenAllSubView() {
+        beforeReadView?.isHidden = true
+        readView?.isHidden = true
+        vocabularyView01?.isHidden = true
+        vocabularyView02?.isHidden = true
+        grammarView?.isHidden = true
     }
     
     @IBAction func btnScoreClicked(_ sender: AnyObject) {
