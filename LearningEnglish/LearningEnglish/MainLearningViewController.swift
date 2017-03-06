@@ -89,6 +89,7 @@ class MainLearningViewController: UIViewController {
         if DataManager.shared.selectedLession != -1
         {
             beforeReadView?.loadData(index: DataManager.shared.selectedLession)
+            readView?.loadData(index: DataManager.shared.selectedLession)
         }
         else
         {

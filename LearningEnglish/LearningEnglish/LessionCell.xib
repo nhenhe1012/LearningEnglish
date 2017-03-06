@@ -16,12 +16,13 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="LessionCell" customModule="LearningEnglish" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_ico_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-hY-Lec">
                         <rect key="frame" x="8" y="8" width="72" height="93.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="cHx-hY-Lec" secondAttribute="height" multiplier="1:1.3" id="68k-9j-gqg"/>
                         </constraints>
@@ -94,7 +95,7 @@
                 <outlet property="lblChapter" destination="dXJ-cW-43n" id="RkO-Xg-ykZ"/>
                 <outlet property="lblName" destination="ABH-V0-tmH" id="Jk6-hR-uec"/>
             </connections>
-            <point key="canvasLocation" x="-158" y="-119"/>
+            <point key="canvasLocation" x="-195" y="-213"/>
         </tableViewCell>
     </objects>
     <resources>

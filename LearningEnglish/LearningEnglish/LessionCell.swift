@@ -21,6 +21,7 @@ class LessionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.backgroundColor = self.contentView.backgroundColor
     }
 
     func cellSelect() {

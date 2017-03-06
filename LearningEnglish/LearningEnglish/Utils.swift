@@ -8,6 +8,8 @@
 
 import Foundation
 import AVFoundation
+import UIKit
+
 
 class Utils{
     
@@ -17,6 +19,45 @@ class Utils{
     static var musicPlayer: AVAudioPlayer?
     static var beepPlayer = AVAudioPlayer()
     static var winPlayer = AVAudioPlayer()
+    
+    
+    class func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), cornerRadius: 10.0)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        color.setFill()
+        path.addClip()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
+    class func convertAttributedString(str: String) -> NSAttributedString
+    {
+        let trueStr = "<font face=\"Helvetica Neue\" size=\"4\">\(str)</font>"
+        do {
+            let attb1 = try NSAttributedString(data: trueStr.data(using: .unicode, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+            return attb1
+        } catch {
+            print(error)
+            return NSAttributedString(string: "")
+        }
+    }
+    
+    class func readTextFile(fileName: String) -> String {
+        if let path = Bundle.main.path(forResource: fileName, ofType: "txt"){
+            
+            do {
+                let content = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+                return content
+            } catch  {
+                print(error)
+            }
+        }
+        return ""
+    }
     
     class func playSound() {
         

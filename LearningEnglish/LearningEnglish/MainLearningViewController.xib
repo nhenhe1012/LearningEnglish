@@ -36,7 +36,7 @@
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-MS-EEb">
                     <rect key="frame" x="0.0" y="20" width="292.5" height="748"/>
-                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-N0-tSE">
                     <rect key="frame" x="292.5" y="0.0" width="731.5" height="768"/>
@@ -114,7 +114,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-vQ-nnb">
-                            <rect key="frame" x="0.0" y="100" width="731.5" height="668"/>
+                            <rect key="frame" x="0.0" y="100" width="731.5" height="608"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
@@ -125,7 +125,7 @@
                         <constraint firstAttribute="trailing" secondItem="nsD-h7-YKd" secondAttribute="trailing" id="LmL-DG-QMB"/>
                         <constraint firstItem="kpY-vQ-nnb" firstAttribute="leading" secondItem="FO3-N0-tSE" secondAttribute="leading" id="Loo-Ic-kRZ"/>
                         <constraint firstItem="kpY-vQ-nnb" firstAttribute="top" secondItem="nsD-h7-YKd" secondAttribute="bottom" id="ZAe-yL-PNa"/>
-                        <constraint firstAttribute="bottom" secondItem="kpY-vQ-nnb" secondAttribute="bottom" id="f8j-Om-tnW"/>
+                        <constraint firstAttribute="bottom" secondItem="kpY-vQ-nnb" secondAttribute="bottom" constant="60" id="f8j-Om-tnW"/>
                         <constraint firstItem="nsD-h7-YKd" firstAttribute="leading" secondItem="FO3-N0-tSE" secondAttribute="leading" id="pS5-Df-VJK"/>
                     </constraints>
                 </view>

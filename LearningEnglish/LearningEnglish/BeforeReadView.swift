@@ -24,22 +24,12 @@ class BeforeReadView: UIView {
     
     func loadData(index: Int) {
 
-        beforeYouReadTextView.attributedText = convertAttributedString(str: DataManager.shared.arrLession[index].bfTheRead)
-        newVocabularyTextView.attributedText = convertAttributedString(str: DataManager.shared.arrLession[index].nVocabulary)
-        idiomsTextView.attributedText = convertAttributedString(str: DataManager.shared.arrLession[index].iDiom)
+        beforeYouReadTextView.attributedText = Utils.convertAttributedString(str: DataManager.shared.arrLession[index].bfTheRead)
+        newVocabularyTextView.attributedText = Utils.convertAttributedString(str: DataManager.shared.arrLession[index].nVocabulary)
+        idiomsTextView.attributedText = Utils.convertAttributedString(str: DataManager.shared.arrLession[index].iDiom)
     }
     
-    func convertAttributedString(str: String) -> NSAttributedString
-    {
-        let trueStr = "<font face=\"Helvetica Neue\" size=\"4\">\(str)</font>"
-        do {
-            let attb1 = try NSAttributedString(data: trueStr.data(using: .unicode, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
-            return attb1
-        } catch {
-            print(error)
-            return NSAttributedString(string: "")
-        }
-    }
+    
     
     class func instanceFromNib() -> BeforeReadView {
         return UINib(nibName: "BeforeReadView", bundle: nil).instantiate(withOwner: self, options: nil).first as! BeforeReadView
