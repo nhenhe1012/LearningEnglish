@@ -11,10 +11,16 @@ import AVFoundation
 import UIKit
 
 
+protocol UtilsDelegate {
+    func funcDidPause()
+}
+
 class Utils{
     
     static var musicURL:URL?
+    static var fileName: String = ""
     static var musicPlayer: AVAudioPlayer?
+    static var delegate: UtilsDelegate?
     
     class func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -31,7 +37,7 @@ class Utils{
     
     class func convertAttributedString(str: String) -> NSAttributedString
     {
-        let trueStr = "<font face=\"Helvetica Neue\" size=\"4\">\(str)</font>"
+        let trueStr = "<font face=\"Helvetica Neue\" size=\"5\">\(str)</font>"
         do {
             let attb1 = try NSAttributedString(data: trueStr.data(using: .unicode, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
             return attb1
@@ -54,17 +60,24 @@ class Utils{
         return ""
     }
     
-    class func playBackgroundMusic(name: String) {
-        musicURL = Bundle.main.url(forResource: name, withExtension: "mp3")!
-        do {
-            try musicPlayer = AVAudioPlayer(contentsOf: musicURL!)
-        } catch {
-            
+    class func initAudio(name: String)  {
+        if fileName != name
+        {
+            fileName = name
+            musicURL = Bundle.main.url(forResource: name, withExtension: "mp3")!
+            do {
+                try musicPlayer = AVAudioPlayer(contentsOf: musicURL!)
+            } catch {
+                
+            }
         }
-        //musicPlayer?.numberOfLoops = -1
+    }
+    
+    class func playBackgroundMusic() {
         musicPlayer?.play()
     }
     class func pauseBackgoundMusic() {
         musicPlayer?.stop()
+        delegate?.funcDidPause()
     }
 }

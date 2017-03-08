@@ -11,6 +11,7 @@ import Foundation
 struct QuestionType01
 {
     var maCauHoi: Int = 0
+    var maLession: Int = 0
     var noiDung: String = ""
     var dapAnA: String = ""
     var dapAnB: String = ""
@@ -18,4 +19,6 @@ struct QuestionType01
     var dapAnD: String = ""
     var dapAn: Int = 0
     var daChon: Int = 0
+    var dangCauHoi: Int = 0
+   
 }

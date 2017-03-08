@@ -32,6 +32,14 @@ class MainLearningViewController: UIViewController {
     
     @IBOutlet weak var btnScore: UIButton!
     
+    @IBOutlet weak var btnPre: UIButton!
+    
+    @IBOutlet weak var btnNext: UIButton!
+    
+    @IBOutlet weak var viewPaging: UIView!
+    
+    @IBOutlet weak var paging: UIPageControl!
+    
     var beforeReadView: BeforeReadView?
     
     var readView: ReadView?
@@ -45,10 +53,20 @@ class MainLearningViewController: UIViewController {
     var resultView: ResultView?
     
     var curTab: Int = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        btnBeforRead.isExclusiveTouch = true
+        btnRead.isExclusiveTouch = true
+        btnVocabulary.isExclusiveTouch = true
+        btnVocabulary12.isExclusiveTouch = true
+        btnVocabulary34.isExclusiveTouch = true
+        btnGrammar.isExclusiveTouch = true
+        btnScore.isExclusiveTouch = true
+        btnPre.isExclusiveTouch = true
+        btnNext.isExclusiveTouch = true
+        
         mainTableView.register(UINib(nibName: "LessionCell", bundle: nil), forCellReuseIdentifier: "cell")
         mainTableView.delegate = self
         mainTableView.dataSource = self
@@ -68,7 +86,6 @@ class MainLearningViewController: UIViewController {
         resultView = ResultView.instanceFromNib()
         
         
-        
         beforeReadView?.frame = mainContentPart.bounds
         readView?.frame = mainContentPart.bounds
         vocabularyView01?.frame = mainContentPart.bounds
@@ -83,19 +100,12 @@ class MainLearningViewController: UIViewController {
         self.mainContentPart.addSubview(grammarView!)
         
         hiddenAllSubView()
+        
+        viewPaging.isHidden = true
     }
     
     @IBAction func btnClicked(_ sender: UIButton) {
-        if DataManager.shared.selectedLession != -1
-        {
-            beforeReadView?.loadData(index: DataManager.shared.selectedLession)
-            readView?.loadData(index: DataManager.shared.selectedLession)
-        }
-        else
-        {
-            return
-        }
-        if curTab == sender.tag{
+        if DataManager.shared.selectedLession == -1{
             return
         }
         setAllButtonDefault()
@@ -108,24 +118,38 @@ class MainLearningViewController: UIViewController {
         else{
             handleVocabularyBtn(isHidden: true)
         }
-        curTab = sender.tag
         switch sender.tag {
         case 1:
             imgNameString = "button_beforuread_02.png"
+            beforeReadView?.loadData(index: DataManager.shared.selectedLession)
             beforeReadView?.isHidden = false
+            btnPre.isEnabled = false
+            btnNext.isEnabled = true
+            curTab = 1
             break
         case 2:
             imgNameString = "button_Read_02.png"
+            readView?.loadData(index: DataManager.shared.selectedLession)
             readView?.isHidden = false
+            btnPre.isEnabled = true
+            btnNext.isEnabled = true
+            curTab = 2
             break
         case 3:
             imgNameString = "button_vocabulary_02.png"
             self.btnVocabulary12.setImage(UIImage(named: "btn_1&2_act.png"), for: .normal)
             vocabularyView01?.isHidden = false
+            btnPre.isEnabled = true
+            btnNext.isEnabled = true
+            curTab = 3
             break
         case 4:
             imgNameString = "button_grammar_02.png"
             grammarView?.isHidden = false
+            grammarView?.loadData(index: DataManager.shared.selectedLession)
+            btnNext.isEnabled = false
+            btnPre.isEnabled = true
+            curTab = 4
             break
         case 5:
             self.btnVocabulary.setImage(UIImage(named: "button_vocabulary_02.png"), for: .normal)
@@ -142,10 +166,54 @@ class MainLearningViewController: UIViewController {
         default:
             break
         }
-
+        paging.currentPage = curTab - 1
         sender.setImage(UIImage(named: imgNameString), for: .normal)
     }
     
+    @IBAction func btnPagingClicked(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            btnNext.isEnabled = true
+            if curTab > 1
+            {
+                curTab -= 1
+                selectTabWithTag(tag: curTab)
+            }
+            break
+        case 1:
+            btnPre.isEnabled = true
+            if curTab < 4
+            {
+                curTab += 1
+                selectTabWithTag(tag: curTab)
+            }
+            break
+        default:
+            
+            break
+        }
+    }
+    
+    func selectTabWithTag(tag: Int) {
+        switch tag {
+        case 1:
+            btnClicked(btnBeforRead)
+            break
+        case 2:
+            btnClicked(btnRead)
+            break
+        case 3:
+            btnClicked(btnVocabulary)
+            break
+        case 4:
+            btnClicked(btnGrammar)
+            break
+            
+        default:
+            break
+        }
+    }
     
     func hiddenAllSubView() {
         beforeReadView?.isHidden = true
@@ -157,6 +225,26 @@ class MainLearningViewController: UIViewController {
     
     @IBAction func btnScoreClicked(_ sender: AnyObject) {
         
+        if DataManager.shared.selectedLession == -1{
+            return
+        }
+        
+        let alert = UIAlertController(title: "Chapter \(DataManager.shared.selectedLession + 1)", message: "Do you want to submit this Chapter?", preferredStyle: .actionSheet)
+        
+        alert.modalPresentationStyle = .popover
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            DataManager.shared.isScore = true
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+            
+        }))
+        
+        alert.popoverPresentationController?.sourceView = self.btnScore
+        alert.popoverPresentationController?.sourceRect = self.btnScore.bounds
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func handleVocabularyBtn(isHidden: Bool)  {
@@ -201,7 +289,17 @@ extension MainLearningViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.cellForRow(at: indexPath) as! LessionCell
         DataManager.shared.selectedLession = indexPath.row
         
+        DataManager.shared.isScore = false
+        
+        DataManager.shared.curReadAnswer = 0
+        
+        DataManager.shared.loadReadVoca4Grammar()
+        
+        viewPaging.isHidden = false
+
         btnClicked(btnBeforRead)
+        
+        Utils.pauseBackgoundMusic()
         
         cell.cellSelect()
     }

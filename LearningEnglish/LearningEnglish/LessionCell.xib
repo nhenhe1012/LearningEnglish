@@ -4,10 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,50 +12,43 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="KGk-i7-Jjw" customClass="LessionCell" customModule="LearningEnglish" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_ico_normal.png" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-hY-Lec">
-                        <rect key="frame" x="8" y="8" width="72" height="93.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="cHx-hY-Lec" secondAttribute="height" multiplier="1:1.3" id="68k-9j-gqg"/>
-                        </constraints>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHm-qS-cv7">
-                        <rect key="frame" x="80" y="0.0" width="240" height="109.5"/>
+                        <rect key="frame" x="5" y="2" width="310" height="106"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXJ-cW-43n">
-                                <rect key="frame" x="93.5" y="8" width="52.5" height="24"/>
+                                <rect key="frame" x="128" y="8" width="53" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVa-rf-3oj">
-                                <rect key="frame" x="35" y="79.5" width="22" height="20"/>
+                                <rect key="frame" x="70" y="76" width="22" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-3X-Dne">
-                                <rect key="frame" x="72" y="79.5" width="22" height="20"/>
+                                <rect key="frame" x="107" y="76" width="22" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="qX3-te-rSd">
-                                <rect key="frame" x="109" y="79.5" width="22" height="20"/>
+                                <rect key="frame" x="144" y="76" width="22" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="ipw-EQ-0vK">
-                                <rect key="frame" x="146" y="79.5" width="22" height="20"/>
+                                <rect key="frame" x="181" y="76" width="22" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="8an-ZD-IN4">
-                                <rect key="frame" x="183" y="79.5" width="22" height="20"/>
+                                <rect key="frame" x="218" y="76" width="22" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABH-V0-tmH">
-                                <rect key="frame" x="10" y="38" width="220" height="19.5"/>
+                                <rect key="frame" x="10" y="38" width="290" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ABH-V0-tmH" secondAttribute="trailing" constant="10" id="Cnn-zv-mjA"/>
                             <constraint firstItem="dXJ-cW-43n" firstAttribute="top" secondItem="oHm-qS-cv7" secondAttribute="top" constant="8" id="HUq-T6-Mf1"/>
@@ -80,26 +70,22 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="oHm-qS-cv7" firstAttribute="leading" secondItem="cHx-hY-Lec" secondAttribute="trailing" id="2zt-w7-1Pc"/>
-                    <constraint firstItem="cHx-hY-Lec" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3bp-Qo-vnD"/>
-                    <constraint firstItem="cHx-hY-Lec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8hw-SB-XX8"/>
-                    <constraint firstAttribute="bottom" secondItem="oHm-qS-cv7" secondAttribute="bottom" id="9iP-Ls-nxT"/>
-                    <constraint firstAttribute="trailing" secondItem="oHm-qS-cv7" secondAttribute="trailing" id="E0R-58-Ac1"/>
-                    <constraint firstItem="oHm-qS-cv7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bDm-QM-JE2"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="cHx-hY-Lec" secondAttribute="bottom" id="ycr-bv-JTt"/>
+                    <constraint firstAttribute="bottom" secondItem="oHm-qS-cv7" secondAttribute="bottom" constant="2" id="9iP-Ls-nxT"/>
+                    <constraint firstAttribute="trailing" secondItem="oHm-qS-cv7" secondAttribute="trailing" constant="5" id="E0R-58-Ac1"/>
+                    <constraint firstItem="oHm-qS-cv7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Qes-yG-cIV"/>
+                    <constraint firstItem="oHm-qS-cv7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="bDm-QM-JE2"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="imgBook" destination="cHx-hY-Lec" id="5pE-JB-CGP"/>
+                <outlet property="contentSubView" destination="oHm-qS-cv7" id="O79-wY-SlG"/>
                 <outlet property="lblChapter" destination="dXJ-cW-43n" id="RkO-Xg-ykZ"/>
                 <outlet property="lblName" destination="ABH-V0-tmH" id="Jk6-hR-uec"/>
             </connections>
-            <point key="canvasLocation" x="-195" y="-213"/>
+            <point key="canvasLocation" x="-440" y="-219"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="book_ico_normal.png" width="63" height="68"/>
         <image name="star_01.png" width="22" height="20"/>
         <image name="star_02.png" width="22" height="20"/>
     </resources>

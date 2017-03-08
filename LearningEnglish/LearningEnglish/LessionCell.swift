@@ -16,20 +16,24 @@ class LessionCell: UITableViewCell {
     
     @IBOutlet weak var lblName: UILabel!
     
+    @IBOutlet weak var contentSubView: UIView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.backgroundColor = self.contentView.backgroundColor
+        self.contentSubView.layer.cornerRadius = 15
+        self.contentSubView.clipsToBounds = true
+        self.contentView.layer.cornerRadius = 15
     }
 
     func cellSelect() {
-        imgBook.image = UIImage(named: "book_ico_active.png")
+     //   imgBook?.image = UIImage(named: "book_ico_active.png")
         lblChapter.textColor = .blue
     }
     func cellDeSelect() {
-        imgBook.image = UIImage(named: "book_ico_normal.png")
+       // imgBook?.image = UIImage(named: "book_ico_normal.png")
         lblChapter.textColor = .white
     }
     
