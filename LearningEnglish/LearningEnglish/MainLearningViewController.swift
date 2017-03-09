@@ -99,6 +99,10 @@ class MainLearningViewController: UIViewController {
         self.mainContentPart.addSubview(vocabularyView02!)
         self.mainContentPart.addSubview(grammarView!)
         
+        vocabularyView01?.delegate = self
+        
+        vocabularyView02?.delegate = self
+        
         hiddenAllSubView()
         
         viewPaging.isHidden = true
@@ -121,16 +125,16 @@ class MainLearningViewController: UIViewController {
         switch sender.tag {
         case 1:
             imgNameString = "button_beforuread_02.png"
-            beforeReadView?.loadData(index: DataManager.shared.selectedLession)
             beforeReadView?.isHidden = false
+            beforeReadView?.loadData(index: DataManager.shared.selectedLession)
             btnPre.isEnabled = false
             btnNext.isEnabled = true
             curTab = 1
             break
         case 2:
             imgNameString = "button_Read_02.png"
-            readView?.loadData(index: DataManager.shared.selectedLession)
             readView?.isHidden = false
+            readView?.loadData(index: DataManager.shared.selectedLession)
             btnPre.isEnabled = true
             btnNext.isEnabled = true
             curTab = 2
@@ -139,6 +143,7 @@ class MainLearningViewController: UIViewController {
             imgNameString = "button_vocabulary_02.png"
             self.btnVocabulary12.setImage(UIImage(named: "btn_1&2_act.png"), for: .normal)
             vocabularyView01?.isHidden = false
+            vocabularyView01?.loadData(index: DataManager.shared.selectedLession)
             btnPre.isEnabled = true
             btnNext.isEnabled = true
             curTab = 3
@@ -155,12 +160,14 @@ class MainLearningViewController: UIViewController {
             self.btnVocabulary.setImage(UIImage(named: "button_vocabulary_02.png"), for: .normal)
             imgNameString = "btn_1&2_act.png"
             vocabularyView01?.isHidden = false
+            vocabularyView01?.loadData(index: DataManager.shared.selectedLession)
             curTab = 3
             break
         case 6:
             self.btnVocabulary.setImage(UIImage(named: "button_vocabulary_02.png"), for: .normal)
             imgNameString = "btn_3&4_act.png"
             vocabularyView02?.isHidden = false
+            vocabularyView02?.loadData(index: DataManager.shared.selectedLession)
             curTab = 3
             break
         default:
@@ -295,6 +302,8 @@ extension MainLearningViewController: UITableViewDelegate, UITableViewDataSource
         
         DataManager.shared.loadReadVoca4Grammar()
         
+        DataManager.shared.loadVoca12()
+        
         viewPaging.isHidden = false
 
         btnClicked(btnBeforRead)
@@ -309,4 +318,20 @@ extension MainLearningViewController: UITableViewDelegate, UITableViewDataSource
         cell?.cellDeSelect()
     }
     
+}
+extension MainLearningViewController: VocabularyViewDelegate
+{
+    func needPresentOption() {
+        self.present((vocabularyView01?.custom)!, animated: true) {
+            self.vocabularyView01?.custom?.repairLocal()
+        }
+    }
+}
+extension MainLearningViewController: VocabularyView2Delegate
+{
+    func needPresent2Option() {
+        self.present((vocabularyView02?.custom)!, animated: true) {
+            self.vocabularyView02?.custom?.repairLocal()
+        }
+    }
 }

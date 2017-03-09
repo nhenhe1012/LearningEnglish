@@ -63,8 +63,9 @@ class GrammarView: UIView {
                     break
                 }
                 let xLocation = x * 170
-                let btn = UIButton(frame: CGRect(x: 70 + xLocation, y: 5 + yLocation, width: 170, height: 30))
+                let btn = UIButton(frame: CGRect(x: 70 + xLocation, y: 5 + yLocation, width: 160, height: 30))
                 btn.tag = i * 10 + x
+                btn.titleLabel?.font = UIFont(name: "Helvetica", size: 14)
                 btn.contentHorizontalAlignment = .left
                 btn.setTitle("\(bonus)\(answer)", for: .normal)
                 btn.addTarget(self, action: #selector(btnAnswerClicked(_:)), for: .touchUpInside)

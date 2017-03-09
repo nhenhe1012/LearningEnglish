@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54A350D41E71053000B0CC61 /* CustomSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A350D21E71053000B0CC61 /* CustomSelectViewController.swift */; };
+		54A350D51E71053000B0CC61 /* CustomSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A350D31E71053000B0CC61 /* CustomSelectViewController.xib */; };
 		840310A51E6C6227001CC929 /* MainLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840310A31E6C6227001CC929 /* MainLearningViewController.swift */; };
 		840310A61E6C6227001CC929 /* MainLearningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840310A41E6C6227001CC929 /* MainLearningViewController.xib */; };
 		840310A81E6C62E3001CC929 /* BeforeReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840310A71E6C62E3001CC929 /* BeforeReadView.swift */; };
@@ -275,6 +277,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54A350D21E71053000B0CC61 /* CustomSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectViewController.swift; sourceTree = "<group>"; };
+		54A350D31E71053000B0CC61 /* CustomSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSelectViewController.xib; sourceTree = "<group>"; };
 		840310A31E6C6227001CC929 /* MainLearningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLearningViewController.swift; sourceTree = "<group>"; };
 		840310A41E6C6227001CC929 /* MainLearningViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainLearningViewController.xib; sourceTree = "<group>"; };
 		840310A71E6C62E3001CC929 /* BeforeReadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeforeReadView.swift; sourceTree = "<group>"; };
@@ -871,6 +875,8 @@
 				840310B91E6C63E7001CC929 /* VocabularyView02.xib */,
 				840310BB1E6C63F7001CC929 /* GrammarView.xib */,
 				840310BD1E6C6402001CC929 /* ResultView.xib */,
+				54A350D21E71053000B0CC61 /* CustomSelectViewController.swift */,
+				54A350D31E71053000B0CC61 /* CustomSelectViewController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1173,6 +1179,7 @@
 				8403123A1E6C6C04001CC929 /* L2-Chapter11.mp3 in Resources */,
 				8403125C1E6C6C04001CC929 /* 15_tuvung3.txt in Resources */,
 				840310BC1E6C63F7001CC929 /* GrammarView.xib in Resources */,
+				54A350D51E71053000B0CC61 /* CustomSelectViewController.xib in Resources */,
 				840312341E6C6C04001CC929 /* L2-Chapter05.mp3 in Resources */,
 				840310C21E6C6425001CC929 /* LessionCell.xib in Resources */,
 				840311A11E6C6BE5001CC929 /* button_share_normal.png in Resources */,
@@ -1341,6 +1348,7 @@
 			files = (
 				846C4EF11E699FB10037AF05 /* ViewController.swift in Sources */,
 				845007491E6C215600DB8C55 /* DataManager.swift in Sources */,
+				54A350D41E71053000B0CC61 /* CustomSelectViewController.swift in Sources */,
 				84B0CAFB1E6C868300B2206E /* QuestionType01.swift in Sources */,
 				84B0CAFD1E6C869300B2206E /* QuestionType02.swift in Sources */,
 				840310B21E6C634B001CC929 /* ResultView.swift in Sources */,

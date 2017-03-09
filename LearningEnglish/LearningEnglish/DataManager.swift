@@ -16,6 +16,12 @@ class DataManager{
     
     var arrNguPhap = [QuestionType01]()
     
+    var arrVoca1 = [QuestionType02]()
+    
+    var arrVoca2 = [QuestionType02]()
+    
+    var arrVoca3 = [QuestionType02]()
+    
     var arrVoca4 = [QuestionType01]()
     
     var selectedLession: Int = -1
@@ -115,6 +121,63 @@ class DataManager{
         db = nil
         statement = nil
     }
+    
+    func loadVoca12() {
+        
+        arrVoca1 = [QuestionType02]()
+        arrVoca2 = [QuestionType02]()
+        
+        var db: OpaquePointer? = nil
+        var statement: OpaquePointer? = nil
+        if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
+            print("error opening database")
+        }
+        if sqlite3_prepare_v2(db, "select * from PhanTuVung1_2 where MaLession = \(DataManager.shared.selectedLession + 1)", -1, &statement, nil) != SQLITE_OK {
+            let errmsg = String(cString: sqlite3_errmsg(db))
+            print("error preparing select: \(errmsg)")
+        }
+        
+        while sqlite3_step(statement) == SQLITE_ROW {
+            var question = QuestionType02()
+            question.maCauHoi = Int(sqlite3_column_int64(statement, 0))
+            question.maLession = Int(sqlite3_column_int64(statement, 1))
+            if let noiDung = sqlite3_column_text(statement, 2) {
+                question.noiDung = String(cString: noiDung)
+            }
+            if let dapAn = sqlite3_column_text(statement, 3) {
+                question.dapAn = String(cString: dapAn)
+            }
+            
+            question.dangCauHoi = Int(sqlite3_column_int64(statement, 4))
+            
+            switch question.dangCauHoi {
+            case 4:
+                arrVoca1.append(question)
+                break
+            case 5:
+                arrVoca2.append(question)
+                break
+            default:
+                
+                break
+            }
+        }
+        
+        if sqlite3_finalize(statement) != SQLITE_OK {
+            let errmsg = String(cString: sqlite3_errmsg(db))
+            print("error finalizing prepared statement: \(errmsg)")
+        }
+        
+        if sqlite3_close(db) != SQLITE_OK {
+            let errmsg = String(cString: sqlite3_errmsg(db))
+            print("error finalizing prepared statement: \(errmsg)")
+        }
+        
+        db = nil
+        statement = nil
+    }
+    
+    
     
     func loadLessionData()
     {

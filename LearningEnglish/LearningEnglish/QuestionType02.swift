@@ -11,8 +11,10 @@ import Foundation
 struct QuestionType02
 {
     var maCauHoi: Int = 0
+    var maLession: Int = 0
     var noiDung: String = ""
-    var dapAnA: String = ""
+    var dapAn: String = ""
     var viTri: Int = 0
     var daChon: String = ""
+    var dangCauHoi: Int = 0
 }
