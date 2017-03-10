@@ -92,6 +92,8 @@ class MainLearningViewController: UIViewController {
         vocabularyView02?.frame = mainContentPart.bounds
         grammarView?.frame = mainContentPart.bounds
         
+        vocabularyView01?.addViewForVocabulary()
+        
         
         self.mainContentPart.addSubview(beforeReadView!)
         self.mainContentPart.addSubview(readView!)

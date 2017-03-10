@@ -46,12 +46,31 @@ class CustomSelectViewController: UIViewController {
     }
     
     
-    func defaultLocal() {
+    func defaultLocal(_ mode: Int) {
         btn01.tag = 1
         btn02.tag = 2
         btn03.tag = 3
         btn04.tag = 4
         btn05.tag = 5
+        
+        if mode == 3
+        {
+            btn02.isHidden = true
+            btn04.isHidden = true
+            btn03.tag = 2
+            btn03.setImage(UIImage(named: "dapan02.png"), for: .normal)
+            btn05.tag = 3
+            btn05.setImage(UIImage(named: "dapan03.png"), for: .normal)
+        }
+        else
+        {
+            btn02.isHidden = false
+            btn04.isHidden = false
+            btn03.setImage(UIImage(named: "dapan03.png"), for: .normal)
+            btn05.setImage(UIImage(named: "dapan05.png"), for: .normal)
+
+        }
+    
         btn01.frame = center
         btn02.frame = center
         btn03.frame = center

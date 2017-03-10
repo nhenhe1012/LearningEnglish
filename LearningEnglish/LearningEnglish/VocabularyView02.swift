@@ -24,6 +24,8 @@ class VocabularyView02: UIView {
     
     @IBOutlet weak var btn35: UIButton!
 
+    
+    
     var custom: CustomSelectViewController?
     
     var delegate: VocabularyView2Delegate?
@@ -51,7 +53,7 @@ class VocabularyView02: UIView {
         custom?.popoverPresentationController?.sourceRect = sender.bounds
         custom?.popoverPresentationController?.backgroundColor = UIColor(white: 1, alpha: 0.5)
         delegate?.needPresent2Option()
-        custom?.defaultLocal()
+        custom?.defaultLocal(sender.tag)
         
     }
     
@@ -72,5 +74,6 @@ extension VocabularyView02: CustomSelectViewDelegate
 {
     func didSelectButtonAt(index: Int) {
         print(index)
+        custom?.dismiss(animated: false, completion: nil)
     }
 }

@@ -38,8 +38,7 @@ class GrammarView: UIView {
             lbl.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
             contentAnswer.addSubview(lbl)
             
-            for x in 0...3
-            {
+            for x in 0...3{
                 var bonus = ""
                 var answer = ""
                 switch x {

@@ -38,59 +38,59 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G6U-MS-EEb">
-                    <rect key="frame" x="0.0" y="20" width="256" height="748"/>
+                    <rect key="frame" x="0.0" y="20" width="244" height="748"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-N0-tSE">
-                    <rect key="frame" x="256" y="0.0" width="768" height="768"/>
+                    <rect key="frame" x="244" y="0.0" width="780" height="768"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-h7-YKd">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="780" height="100"/>
                             <subviews>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk3-4L-29x">
-                                    <rect key="frame" x="53" y="33" width="137" height="35"/>
+                                    <rect key="frame" x="65" y="33" width="137" height="35"/>
                                     <state key="normal" image="button_beforuread_01.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="qY7-kE-sKg"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQD-ZV-ruz">
-                                    <rect key="frame" x="240" y="33" width="63" height="35"/>
+                                    <rect key="frame" x="252" y="33" width="63" height="35"/>
                                     <state key="normal" image="button_Read_01.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="QCJ-zd-ofU"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-fH-SaU">
-                                    <rect key="frame" x="353" y="33" width="118" height="35"/>
+                                    <rect key="frame" x="365" y="33" width="118" height="35"/>
                                     <state key="normal" image="button_vocabulary_01.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="TpQ-ux-QIx"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-Da-sQp">
-                                    <rect key="frame" x="521" y="33" width="102" height="35"/>
+                                    <rect key="frame" x="533" y="33" width="102" height="35"/>
                                     <state key="normal" image="button_grammar_01.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="IoM-hm-NPO"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-xT-ChK">
-                                    <rect key="frame" x="663" y="23" width="55" height="55"/>
+                                    <rect key="frame" x="675" y="23" width="55" height="55"/>
                                     <state key="normal" image="button_score_active.png"/>
                                     <connections>
                                         <action selector="btnScoreClicked:" destination="-1" eventType="touchUpInside" id="fbU-CB-3QE"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQU-tJ-e2R">
-                                    <rect key="frame" x="353" y="73" width="56" height="22"/>
+                                    <rect key="frame" x="365" y="73" width="56" height="22"/>
                                     <state key="normal" image="btn_1&amp;2_act.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="biE-5N-9hL"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-W1-RnX">
-                                    <rect key="frame" x="415" y="73" width="56" height="22"/>
+                                    <rect key="frame" x="427" y="73" width="56" height="22"/>
                                     <state key="normal" image="btn_3&amp;4_nor.png"/>
                                     <connections>
                                         <action selector="btnClicked:" destination="-1" eventType="touchUpInside" id="8h3-Zt-x5a"/>
@@ -117,24 +117,24 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpY-vQ-nnb">
-                            <rect key="frame" x="0.0" y="100" width="768" height="613"/>
+                            <rect key="frame" x="0.0" y="100" width="780" height="613"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7o-aC-N1r">
-                            <rect key="frame" x="0.0" y="713" width="768" height="55"/>
+                            <rect key="frame" x="0.0" y="713" width="780" height="55"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFX-AX-Muc">
-                                    <rect key="frame" x="257.5" y="11" width="49" height="35"/>
+                                    <rect key="frame" x="263.5" y="11" width="49" height="35"/>
                                     <state key="normal" image="button_pre_active.png"/>
                                     <connections>
                                         <action selector="btnPagingClicked:" destination="-1" eventType="touchUpInside" id="ws5-ds-t9L"/>
                                     </connections>
                                 </button>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="shO-8A-zg9">
-                                    <rect key="frame" x="356.5" y="10" width="55" height="37"/>
+                                    <rect key="frame" x="362.5" y="10" width="55" height="37"/>
                                 </pageControl>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXK-b7-lSf">
-                                    <rect key="frame" x="461.5" y="11" width="49" height="35"/>
+                                    <rect key="frame" x="467.5" y="11" width="49" height="35"/>
                                     <state key="normal" image="button_next_active.png"/>
                                     <connections>
                                         <action selector="btnPagingClicked:" destination="-1" eventType="touchUpInside" id="wVo-PR-G0N"/>
@@ -178,7 +178,7 @@
                 <constraint firstItem="G6U-MS-EEb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TS0-PZ-7s9"/>
                 <constraint firstAttribute="bottom" secondItem="G6U-MS-EEb" secondAttribute="bottom" id="TbU-tW-3Mh"/>
                 <constraint firstItem="FO3-N0-tSE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VP6-2X-AD8"/>
-                <constraint firstItem="G6U-MS-EEb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/4" id="VQe-Bt-ovD"/>
+                <constraint firstItem="G6U-MS-EEb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/4.2" id="VQe-Bt-ovD"/>
                 <constraint firstAttribute="trailing" secondItem="FO3-N0-tSE" secondAttribute="trailing" id="dcX-LK-rE1"/>
                 <constraint firstItem="FO3-N0-tSE" firstAttribute="leading" secondItem="G6U-MS-EEb" secondAttribute="trailing" id="rtG-Tq-U9c"/>
                 <constraint firstAttribute="bottom" secondItem="jMB-34-Mmz" secondAttribute="bottom" id="vku-VK-5mk"/>
